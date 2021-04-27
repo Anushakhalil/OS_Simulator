@@ -1,6 +1,6 @@
 # OS Simulator App
 
-This is a flutter project, which will provide interface through which you can simulate multiple OS Algorithms.
+This is a flutter project, which will provide an interface through which you can simulate multiple OS Algorithms.
 
 ## References
 
