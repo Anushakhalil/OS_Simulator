@@ -1691,8 +1691,8 @@ Widget cardContainer(item){
                           iconSize: 50,),
                        ),
                        SizedBox(height:20),
-              ex ? Text("Fill the empty fields") : Text(""),
-              list.isEmpty ? Text("") : Expanded(
+              ex ? Text("Fill the empty fields") : Text(""),  //if ? and else :
+                list.isEmpty ? Text("") : Expanded(
                 child: ListView(
                   children: list.map((item) => cardContainer(item)).toList(),
                   ) ,),
@@ -1744,7 +1744,7 @@ class _bankersState extends State<bankers> {
   final pname= TextEditingController();
   final need= TextEditingController();
   List list= [];
-  bool ex= true;
+  bool ex= false;
 
   Text addfunc(){
     if(
@@ -1763,11 +1763,8 @@ class _bankersState extends State<bankers> {
           print(list);
       });
     } else{
-        setState(() {
           ex= true;
-        });
       }
-
   }
 
   
