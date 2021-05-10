@@ -52,7 +52,7 @@ flutter:
     - assets/images/pageRep.jpg
     - assets/images/deadlock.jpg
     - assets/images/bankers.jpg
-    # - images/a_dot_ham.jpeg
+    - assets/images/fitting.jpg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -340,55 +340,61 @@ class _MainMenuState extends State<MainMenu> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Spacer(),
-                  Container(
-                    height: 120,
-                      width: 160,
-                      child: ClipRect(
-                        // borderRadius: BorderRadius.circular(25),
-                            // topLeft: Radius.circular(25)
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(
+                        builder: (context) => fittingALgo()));
+                    },
+                                      child: Container(
+                      height: 120,
+                        width: 160,
+                        child: ClipRect(
+                          // borderRadius: BorderRadius.circular(25),
+                              // topLeft: Radius.circular(25)
+                            // ),
+                          // shape: RoundedRectangleBorder(
+                          //   borderRadius: BorderRadius.only(
+                          //     topLeft: Radius.circular(25)
+                          //   )
                           // ),
-                        // shape: RoundedRectangleBorder(
-                        //   borderRadius: BorderRadius.only(
-                        //     topLeft: Radius.circular(25)
-                        //   )
-                        // ),
-                        // color: Colors.lightBlue.shade100,
-                          child: BackdropFilter(
-                            filter: ImageFilter.blur(
-                              sigmaX: 10,
-                              sigmaY: 10
-                            ) ,
-                              child: Card(
-                                // decoration: BoxDecoration(
-                                  color: Colors.grey.shade200.withOpacity(0.5),
-                                  shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.only(
-                                    bottomLeft: Radius.circular(25)
+                          // color: Colors.lightBlue.shade100,
+                            child: BackdropFilter(
+                              filter: ImageFilter.blur(
+                                sigmaX: 10,
+                                sigmaY: 10
+                              ) ,
+                                child: Card(
+                                  // decoration: BoxDecoration(
+                                    color: Colors.grey.shade200.withOpacity(0.5),
+                                    shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.only(
+                                      bottomLeft: Radius.circular(25)
+                                    ),
+                                    side: BorderSide(
+                                      color: Colors.white.withOpacity(0.5),
+                                      width: 1
+                                    )
                                   ),
-                                  side: BorderSide(
-                                    color: Colors.white.withOpacity(0.5),
-                                    width: 1
-                                  )
+                                  child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text("Fitting",
+                                    style: Theme.of(context).textTheme.bodyText2
+                                    ),
+                                    // Text("Sheduling",
+                                    // style: Theme.of(context).textTheme.bodyText2
+                                    // ),
+                                    Text("Algorithms",
+                                    style: Theme.of(context).textTheme.bodyText2
+                                    ),
+                                  ],
                                 ),
-                                child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text("Fitting",
-                                  style: Theme.of(context).textTheme.bodyText2
-                                  ),
-                                  // Text("Sheduling",
-                                  // style: Theme.of(context).textTheme.bodyText2
-                                  // ),
-                                  Text("Algorithms",
-                                  style: Theme.of(context).textTheme.bodyText2
-                                  ),
-                                ],
                               ),
-                            ),
-                                                      ),
-                          ))),
+                                                        ),
+                            ))),
+                  ),
                   SizedBox(width: 10,),
                   GestureDetector(
                     onTap: (){
@@ -1947,7 +1953,48 @@ class _fittingALgoState extends State<fittingALgo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(
+              "assets/images/fitting.jpg"
+            ),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              SizedBox(height:20),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: IconButton(
+                  onPressed: (){
+                    Navigator.pop(context);
+                  },
+                  icon: Icon(
+                    Icons.arrow_back_ios,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+              SizedBox(height: 20),
+              Text(
+                "Fitting",
+                style: Theme.of(context).textTheme.headline1,
+              ),
+              Text(
+                "Algorithms",
+                style: Theme.of(context).textTheme.headline1,
+              ),
+              SizedBox(height:20),
+              
+            ],
+          ),
+        ),
+        ),
     );
   }
 }
