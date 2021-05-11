@@ -1950,6 +1950,28 @@ class fittingALgo extends StatefulWidget {
 }
 
 class _fittingALgoState extends State<fittingALgo> {
+  final st= TextEditingController();
+  String type= "FF";
+  bool ex = false;
+  List list=[];
+
+  void kch(){
+    if(
+      st.text != ""
+    ){
+      setState(() {
+        ex = false;
+        list.add(
+          {
+            "string" : st.text
+          }
+        );
+      });
+    } else{
+      ex = true;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -1989,8 +2011,139 @@ class _fittingALgoState extends State<fittingALgo> {
                 "Algorithms",
                 style: Theme.of(context).textTheme.headline1,
               ),
-              SizedBox(height:20),
-              
+              SizedBox(height: 50),
+              Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children:[ 
+                    Spacer(),
+                    GestureDetector(
+                      onTap: (){
+                        setState(() {
+                          type = "FF";
+                        });
+                      },
+                                          child: Container(
+                        child: Card(
+                          color: type == "FF" ? Colors.grey[200].withOpacity(0.5) : Colors.grey[200].withOpacity(0.30),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(22),
+                              bottomLeft: Radius.circular(22),
+                            ),
+                            side: BorderSide(
+                              color: Colors.white.withOpacity(0.5),
+                              width: 1 ),),
+                              child: Padding(
+                                padding: const EdgeInsets.fromLTRB(12, 10, 8, 10),
+                                child: Column(
+                                  children: [
+                                    Text("FIRST FIT",
+                                    style: Theme.of(context).textTheme.bodyText2,
+                                    ),
+                                  ],
+                                ),),),
+                                ),
+                    ),
+                              SizedBox(width: 5),
+                              GestureDetector(
+                                onTap: (){
+                                  setState(() {
+                                    type = "BF";
+                                  });
+                                },
+                                                              child: Container(
+                                    child: Card(
+                                    color: type == "BF" ? Colors.grey[200].withOpacity(0.5) : Colors.grey[200].withOpacity(0.30),
+                                    shape: RoundedRectangleBorder(
+                                      side: BorderSide(color: Colors.white.withOpacity(0.5),
+                                      width: 1),),
+                                      child: Padding(
+                                        padding: const EdgeInsets.fromLTRB(12, 10, 8, 10),
+                                        child: Column(
+                                          children: [
+                                            Text("BEST FIT",
+                                            style: Theme.of(context).textTheme.bodyText2,
+                                            ),
+                                          ],
+                                        ),),
+                                    ),
+                                    ),
+                              ),
+                                  SizedBox(width: 5),
+                                  GestureDetector(
+                                    onTap: (){
+                                      setState(() {
+                                        type = "WF";
+                                      });
+                                    },
+                                                                      child: Container(
+                                    child: Card(
+                                    color: type == "WF" ? Colors.grey[200].withOpacity(0.5) : Colors.grey[200].withOpacity(0.30),
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius:BorderRadius.only(
+                                        topRight: Radius.circular(22),
+                                        bottomRight: Radius.circular(22), ),
+                                      side: BorderSide(color: Colors.white.withOpacity(0.5),
+                                      width: 1),),
+                                      child: Padding(
+                                        padding: const EdgeInsets.fromLTRB(12, 10, 8, 10),
+                                        child: Column(
+                                          children: [
+                                            Text("WORST FIT",
+                                            style: Theme.of(context).textTheme.bodyText2,
+                                            ),
+                                          ],
+                                        ),),
+                                    ),
+                                    ),
+                                  ),
+                                  Spacer(),
+                    ],
+                  ),
+                  SizedBox(height: 20),
+                  Padding(
+                padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                              child: Container(
+                  child: Card(
+                    color: Colors.transparent,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                      side: BorderSide(
+                        color: Colors.white,
+                        width: 1 )),
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(40, 12,90, 12),
+                    child: Column(
+                      children: [
+                        TextField(
+                          style: Theme.of(context).textTheme.bodyText2,
+                          decoration: InputDecoration(
+                            hintText: "RAM Partition Size",
+                            hintStyle: Theme.of(context).textTheme.bodyText2,
+                          )),
+                          SizedBox(height: 20),
+                      ],),),
+                  ),),
+              ),
+
+              // Padding(
+              //   padding: EdgeInsets.fromLTRB(105, 12, 105, 12),
+              //   child: Column(
+              //     mainAxisAlignment: MainAxisAlignment.center,
+              //     crossAxisAlignment: CrossAxisAlignment.center,
+              //     children: [
+              //       TextField(
+              //         style: Theme.of(context).textTheme.bodyText2 
+              //         decoration: InputDecoration(
+              //           hintText: ,
+              //           hintStyle: 
+              //         ),
+              //         ),
+
+              //   ],),
+              // ),
+
             ],
           ),
         ),
