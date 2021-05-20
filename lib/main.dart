@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
             bodyText1: TextStyle(
               color: Colors.white,
               fontSize: 20,
-              fontFamily: "L"
+              fontFamily: "L",
               ),
             ),
         // This is the theme of your application.
@@ -476,7 +476,7 @@ class _cpuShedulingState extends State<cpuSheduling> {
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage(
-              "assets/images/cpuSheduling.png"
+              "assets/images/bg_2.jpeg"
             ),
             fit: BoxFit.cover
           )
@@ -553,7 +553,7 @@ class _cpuShedulingState extends State<cpuSheduling> {
                                   // decoration: BoxDecoration(
                                     // shadowColor: Colors.black,
                                     // sinle line condition or else ka matlab ha :
-                                    color: algo == "FCFS" ?  Colors.grey.shade200.withOpacity(0.5):Colors.grey.shade200.withOpacity(0.25),
+                                    color: algo == "FCFS" ?  Colors.grey.shade200.withOpacity(0.4):Colors.grey.shade200.withOpacity(0.3),
                                     shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.only(
                                       topLeft: Radius.circular(25)
@@ -609,7 +609,7 @@ class _cpuShedulingState extends State<cpuSheduling> {
                               ) ,
                                 child: Card(
                                   // decoration: BoxDecoration(
-                                    color: algo == "SJF" ?  Colors.grey.shade200.withOpacity(0.5):Colors.grey.shade200.withOpacity(0.25),
+                                    color: algo == "SJF" ?  Colors.grey.shade200.withOpacity(0.4):Colors.grey.shade200.withOpacity(0.3),
                                     shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.only(
                                       topRight: Radius.circular(25)
@@ -672,7 +672,7 @@ class _cpuShedulingState extends State<cpuSheduling> {
                               ) ,
                                 child: Card(
                                   // decoration: BoxDecoration(
-                                    color: algo == "P" ?  Colors.grey.shade200.withOpacity(0.5):Colors.grey.shade200.withOpacity(0.25),
+                                    color: algo == "P" ?  Colors.grey.shade200.withOpacity(0.4):Colors.grey.shade200.withOpacity(0.3),
                                     shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.only(
                                       bottomLeft: Radius.circular(25)
@@ -728,7 +728,7 @@ class _cpuShedulingState extends State<cpuSheduling> {
                               ) ,
                                 child: Card(
                                   // decoration: BoxDecoration(
-                                    color: algo == "RR" ?  Colors.grey.shade200.withOpacity(0.5):Colors.grey.shade200.withOpacity(0.25),
+                                    color: algo == "RR" ?  Colors.grey.shade200.withOpacity(0.4):Colors.grey.shade200.withOpacity(0.3),
                                     shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.only(
                                       bottomRight: Radius.circular(25)
@@ -791,7 +791,7 @@ class _cpuShedulingState extends State<cpuSheduling> {
                               ) ,
                                 child: Card(
                                   // decoration: BoxDecoration(
-                                    color: type == "Non-P" ?  Colors.grey.shade200.withOpacity(0.5):Colors.grey.shade200.withOpacity(0.35),
+                                    color: type == "Non-P" ?  Colors.grey.shade200.withOpacity(0.4):Colors.grey.shade200.withOpacity(0.3),
                                     shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.only(
                                       bottomLeft: Radius.circular(22),
@@ -848,7 +848,7 @@ class _cpuShedulingState extends State<cpuSheduling> {
                               ) ,
                                 child: Card(
                                   // decoration: BoxDecoration(
-                                    color: type == "P" ?  Colors.grey.shade200.withOpacity(0.5):Colors.grey.shade200.withOpacity(0.35),
+                                    color: type == "P" ?  Colors.grey.shade200.withOpacity(0.4):Colors.grey.shade200.withOpacity(0.3),
                                     shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.only(
                                       bottomRight: Radius.circular(22),
@@ -888,37 +888,35 @@ class _cpuShedulingState extends State<cpuSheduling> {
                   Navigator.push(context, MaterialPageRoute(
                     builder: (context) => algoDetails(algo: algo, type: type)));
                 },
-                              child: Align(
+                child: Align(
                   alignment: Alignment.centerRight,
                   child: Container(
-  height: 50.0,
-  child: RaisedButton(
-    // onPressed: () {},
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(22.0)),
-    padding: EdgeInsets.all(0.0),
-    child: Ink(
-      decoration: BoxDecoration(
-          gradient: LinearGradient(colors: [
-            Colors.blue[900].withOpacity(0.85),
-            // Colors.blue[800].withOpacity(0.85),
-            // Colors.blue[700].withOpacity(0.85),
-            Colors.blue[600].withOpacity(0.85),
-            ],
-            begin: Alignment.centerLeft,
-            end: Alignment.centerRight,
-          ),
-          borderRadius: BorderRadius.circular(15.0)
-      ),
-      child: Container(
-        constraints: BoxConstraints(maxWidth: 180.0, minHeight: 50.0),
-        alignment: Alignment.center,
-        child: Text(
-          "Login",
-          textAlign: TextAlign.center,
-          style: TextStyle(
-              color: Colors.white
-            ),
+                  height: 50.0,
+                  child: RaisedButton(
+            // onPressed: () {},
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(22.0)),
+            padding: EdgeInsets.fromLTRB(0, 0, 12, 0),
+            child: Ink(
+              decoration: BoxDecoration(
+                  gradient: LinearGradient(colors: [
+                    Colors.cyan[900].withOpacity(0.85),
+                    Colors.teal[400].withOpacity(0.85),
+                    ],
+                    begin: Alignment.centerLeft,
+                    end: Alignment.centerRight,
+                  ),
+                  borderRadius: BorderRadius.circular(15.0)
+              ),
+              child: Container(
+                constraints: BoxConstraints(maxWidth: 180.0, minHeight: 50.0),
+                alignment: Alignment.center,
+                child: Text(
+                  "Start Simulation",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      color: Colors.white
+                    ),
           ),
         ),
       ),
@@ -926,7 +924,7 @@ class _cpuShedulingState extends State<cpuSheduling> {
   ),
 ),
               ),
-                SizedBox(height: 30)
+                SizedBox(height: 30),    
             ],),),
       ),
     );
@@ -996,32 +994,46 @@ class _algoDetailsState extends State<algoDetails> {
     } // first if ka else
   }
   Widget cardContainer(item){
-    return Card(
-                  color: Colors.grey[900],
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20),
-                    side: BorderSide(
-                      color: Colors.white,
-                      width: 1)),
-                      child: Padding(
-                        padding: EdgeInsets.fromLTRB(45, 12, 45, 12),
-                        child: Column(
-                          children: [
-                            Text(item["process"]),
-                            Text(item["ariival time"]),
-                            Text(item["burst time"]),
-                            item["priority"] != null ? 
-                            Text(item["priority"]) : Text(""),
-                          ],
-                        ),
-                      ),);
+    return Container(
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                                  child: Card(
+                    color: Colors.grey[900].withOpacity(0.35),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                      side: BorderSide(
+                        color: Colors.white,
+                        width: 1)),
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(90, 12, 90, 12),
+                            child: Column(
+                              children: [
+                                Text(item["process"]),
+                                Text(item["ariival time"]),
+                                Text(item["burst time"]),
+                                item["priority"] != null ? 
+                                Text(item["priority"]) : Text(""),
+                              ],
+                            ),
+                          ),
+                        ],)
+                  ),
+                ),
+              );
   }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
-          color: Colors.grey[900]
+          image: DecorationImage(
+            image: AssetImage(
+              "assets/images/bg_3.jpeg"
+            ),
+            fit: BoxFit.cover
+          )
         ),
         child: Center(
           child: Column(
@@ -1084,12 +1096,12 @@ class _algoDetailsState extends State<algoDetails> {
               widget.type == "Non-P" ?
               Text("Non-Preemptive") : 
               Text("Preemptive"),
-              SizedBox(height: 20),
+              SizedBox(height: 30),
               Container(
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
                                   child: Card(
-                    color: Colors.grey[900],
+                    color: Colors.grey[900].withOpacity(0.35),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
                       side: BorderSide(
@@ -1143,7 +1155,7 @@ class _algoDetailsState extends State<algoDetails> {
               ),
               SizedBox(height: 30),
               Card(
-                color: Colors.grey[900],
+                color: Colors.grey[900].withOpacity(0.35),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(50),
                   side: BorderSide(
@@ -1158,41 +1170,49 @@ class _algoDetailsState extends State<algoDetails> {
               ),
               SizedBox(height: 6),
               ex ? Text("Fill the empty fields"): Text(" "),
+              SizedBox(height: 6),
               list.isEmpty ? Text("") : Expanded(
                               child: ListView(
                   children: list.map((item) => cardContainer(item)).toList()
                 ),
               ),
+              SizedBox(height: 20),
               Spacer(),
                Align(
                   alignment: Alignment.centerRight,
                   child: Container(
-                    margin: EdgeInsets.only(right: 5),
-                      height: 50,
-                        width: 160,
-                        child: Card(
-                            color: Colors.grey[800],
-                            shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15
-                            ),
-                            side: BorderSide(
-                              color: Colors.white.withOpacity(0.5),
-                              width: 1
-                            )
-                          ),
-                          child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text("Start Simulation",
-                            style: Theme.of(context).textTheme.bodyText2
-                            ),
-                          ],
-                        ),
-                          ),
-                          )),
+                  height: 50.0,
+                  child: RaisedButton(
+            // onPressed: () {},
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(22.0)),
+            padding: EdgeInsets.fromLTRB(0, 0, 12, 0),
+            child: Ink(
+              decoration: BoxDecoration(
+                  gradient: LinearGradient(colors: [
+                    Colors.cyan[900].withOpacity(0.85),
+                    Colors.teal[400].withOpacity(0.85),
+                    ],
+                    begin: Alignment.centerLeft,
+                    end: Alignment.centerRight,
                   ),
+                  borderRadius: BorderRadius.circular(15.0)
+              ),
+              child: Container(
+                constraints: BoxConstraints(maxWidth: 180.0, minHeight: 50.0),
+                alignment: Alignment.center,
+                child: Text(
+                  "Start Simulation",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      color: Colors.white
+                    ),
+          ),
+        ),
+      ),
+    ),
+  ),
+),
                   SizedBox(height: 30),
             ],
           ),),
@@ -1236,7 +1256,7 @@ class _processSyncState extends State<processSync> {
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage(
-              "assets/images/process.jpg"
+              "assets/images/bg_2.jpeg"
             ),
             fit: BoxFit.cover
           ),
@@ -1297,38 +1317,38 @@ class _processSyncState extends State<processSync> {
                   Align(
                   alignment: Alignment.centerRight,
                   child: Container(
-  height: 50.0,
-  child: RaisedButton(
-    // onPressed: () {},
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(22.0)),
-    padding: EdgeInsets.all(0.0),
-    child: Ink(
-      decoration: BoxDecoration(
-          gradient: LinearGradient(colors: [
-            Colors.purple[900].withOpacity(0.85),
-            Colors.blue[400].withOpacity(0.85),
-            ],
-            begin: Alignment.centerLeft,
-            end: Alignment.centerRight,
-          ),
-          borderRadius: BorderRadius.circular(15.0)
-      ),
-      child: Container(
-        constraints: BoxConstraints(maxWidth: 180.0, minHeight: 50.0),
-        alignment: Alignment.center,
-        child: Text(
-          "Login",
-          textAlign: TextAlign.center,
-          style: TextStyle(
-              color: Colors.white
+                  height: 50.0,
+                  child: RaisedButton(
+            // onPressed: () {},
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(22.0)),
+            padding: EdgeInsets.fromLTRB(0, 0, 12, 0),
+            child: Ink(
+              decoration: BoxDecoration(
+                  gradient: LinearGradient(colors: [
+                    Colors.cyan[900].withOpacity(0.85),
+                    Colors.teal[400].withOpacity(0.85),
+                    ],
+                    begin: Alignment.centerLeft,
+                    end: Alignment.centerRight,
+                  ),
+                  borderRadius: BorderRadius.circular(15.0)
+              ),
+              child: Container(
+                constraints: BoxConstraints(maxWidth: 180.0, minHeight: 50.0),
+                alignment: Alignment.center,
+                child: Text(
+                  "Start Simulation",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      color: Colors.white
+                    ),
           ),
         ),
       ),
     ),
   ),
 ),
-                          ),
               SizedBox(height:30),
           ],),),
       ),
@@ -1370,7 +1390,7 @@ class _pageReplacementState extends State<pageReplacement> {
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage(
-              "assets/images/pageRep.jpg"
+              "assets/images/bg_2.jpeg"
             ),
             fit: BoxFit.cover,
           ),
@@ -1507,33 +1527,36 @@ class _pageReplacementState extends State<pageReplacement> {
                    Align(
                   alignment: Alignment.centerRight,
                   child: Container(
-                    margin: EdgeInsets.only(right: 8),
-                      height: 50,
-                        width: 160,
-                        decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          begin: Alignment.topLeft,
-                       end: Alignment.topRight,
-                       colors: [
-                         Colors.cyan[900].withOpacity(0.85),
-                         Colors.cyan[800].withOpacity(0.85),
-                         Colors.cyan[700].withOpacity(0.85),
-                         Colors.cyan[600].withOpacity(0.85),
-                         Colors.cyanAccent[700].withOpacity(0.85),
-                         Colors.cyan[400].withOpacity(0.85),
-                         Colors.cyan[300].withOpacity(0.85),
-                         Colors.cyan[200].withOpacity(0.85),  
-                         ],
-                        ),
-                         borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                         ),
-                        child:Center(
-                            child: Text("Start Simulation",
-                            style: Theme.of(context).textTheme.bodyText2
-                            ),
-                        ),
-                          ),
-                          ),
+                  height: 50.0,
+                  child: RaisedButton(
+            // onPressed: () {},
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(22.0)),
+            padding: EdgeInsets.fromLTRB(0, 0, 12, 0),
+            child: Ink(
+              decoration: BoxDecoration(
+                  gradient: LinearGradient(colors: [
+                    Colors.cyan[900].withOpacity(0.85),
+                    Colors.teal[400].withOpacity(0.85),
+                    ],
+                    begin: Alignment.centerLeft,
+                    end: Alignment.centerRight,
+                  ),
+                  borderRadius: BorderRadius.circular(15.0)
+              ),
+              child: Container(
+                constraints: BoxConstraints(maxWidth: 180.0, minHeight: 50.0),
+                alignment: Alignment.center,
+                child: Text(
+                  "Start Simulation",
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.bodyText1,
+          ),
+        ),
+      ),
+    ),
+  ),
+),
                   SizedBox(height:30),
               ],
             ),),
@@ -1605,7 +1628,7 @@ Widget cardContainer(item){
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage(
-            "assets/images/deadlock.jpg"
+            "assets/images/bg_2.jpeg"
           ),
           fit: BoxFit.cover,
         ),
@@ -1709,30 +1732,38 @@ Widget cardContainer(item){
                   Align(
                   alignment: Alignment.centerRight,
                   child: Container(
-                    margin: EdgeInsets.only(right: 8),
-                      height: 50,
-                        width: 160,
-                        decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          begin: Alignment.centerLeft,
-                       end: Alignment.bottomRight,
-                       colors: [
-                         Colors.green[800].withOpacity(0.85),
-                         Colors.green[700].withOpacity(0.85),
-                         Colors.green[600].withOpacity(0.85),
-                         Colors.green[500].withOpacity(0.85),
-                         Colors.lightGreenAccent[700].withOpacity(0.85),
-                         ],
-                        ),
-                         borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                         ),
-                        child:Center(
-                            child: Text("Start Simulation",
-                            style: Theme.of(context).textTheme.bodyText2
-                            ),
-                        ),
-                          ),
-                          ),
+                  height: 50.0,
+                  child: RaisedButton(
+            // onPressed: () {},
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(22.0)),
+            padding: EdgeInsets.fromLTRB(0, 0, 12, 0),
+            child: Ink(
+              decoration: BoxDecoration(
+                  gradient: LinearGradient(colors: [
+                    Colors.cyan[900].withOpacity(0.85),
+                    Colors.teal[400].withOpacity(0.85),
+                    ],
+                    begin: Alignment.centerLeft,
+                    end: Alignment.centerRight,
+                  ),
+                  borderRadius: BorderRadius.circular(15.0)
+              ),
+              child: Container(
+                constraints: BoxConstraints(maxWidth: 180.0, minHeight: 50.0),
+                alignment: Alignment.center,
+                child: Text(
+                  "Start Simulation",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      color: Colors.white
+                    ),
+          ),
+        ),
+      ),
+    ),
+  ),
+),
                   SizedBox(height:30),
                 ],
         ),),
@@ -1804,7 +1835,7 @@ Widget cardContainer(item){
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage(
-            "assets/images/bankers.jpg"
+            "assets/images/bg_2.jpeg"
           ),
           fit: BoxFit.cover,
         ),
@@ -1915,35 +1946,38 @@ Widget cardContainer(item){
                   Align(
                   alignment: Alignment.centerRight,
                   child: Container(
-                    margin: EdgeInsets.only(right: 8),
-                      height: 50,
-                        width: 160,
-                        decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          begin: Alignment.topLeft,
-                       end: Alignment.topRight,
-                       colors: [
-                         Colors.lightBlue[900].withOpacity(0.85),
-                         Colors.lightBlue[800].withOpacity(0.85),
-                         Colors.lightBlue[700].withOpacity(0.85),
-                         Colors.lightBlueAccent[700].withOpacity(0.85),
-                         Colors.lightBlue[600].withOpacity(0.85),
-                         Colors.lightBlue[500].withOpacity(0.85),
-                         Colors.lightBlueAccent[400].withOpacity(0.85),
-                         Colors.lightBlue[400].withOpacity(0.85),
-                         Colors.lightBlue[300].withOpacity(0.85),
-                         Colors.lightBlue[200].withOpacity(0.85),
-                         ],
-                        ),
-                         borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                         ),
-                        child:Center(
-                            child: Text("Start Simulation",
-                            style: Theme.of(context).textTheme.bodyText2
-                            ),
-                        ),
-                          ),
-                          ),
+                  height: 50.0,
+                  child: RaisedButton(
+            // onPressed: () {},
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(22.0)),
+            padding: EdgeInsets.fromLTRB(0, 0, 12, 0),
+            child: Ink(
+              decoration: BoxDecoration(
+                  gradient: LinearGradient(colors: [
+                    Colors.cyan[900].withOpacity(0.85),
+                    Colors.teal[400].withOpacity(0.85),
+                    ],
+                    begin: Alignment.centerLeft,
+                    end: Alignment.centerRight,
+                  ),
+                  borderRadius: BorderRadius.circular(15.0)
+              ),
+              child: Container(
+                constraints: BoxConstraints(maxWidth: 180.0, minHeight: 50.0),
+                alignment: Alignment.center,
+                child: Text(
+                  "Start Simulation",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      color: Colors.white
+                    ),
+          ),
+        ),
+      ),
+    ),
+  ),
+),
                   SizedBox(height:30),
                       ],
         ),),
@@ -2027,7 +2061,7 @@ class _fittingALgoState extends State<fittingALgo> {
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage(
-              "assets/images/fitting.jpg"
+              "assets/images/bg_2.jpeg"
             ),
             fit: BoxFit.cover,
           ),
@@ -2208,31 +2242,38 @@ class _fittingALgoState extends State<fittingALgo> {
                   Align(
                   alignment: Alignment.centerRight,
                   child: Container(
-                    margin: EdgeInsets.only(right: 8),
-                      height: 50,
-                        width: 160,
-                        decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          begin: Alignment.topLeft,
-                       end: Alignment.topRight,
-                       colors: [
-                         Colors.teal[900],
-                         Colors.teal[800],
-                         Colors.teal[700],
-                         Colors.teal[600],
-                         Colors.teal[400],
-                         Colors.tealAccent[700],
-                         ],
-                        ),
-                         borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                         ),
-                        child:Center(
-                            child: Text("Start Simulation",
-                            style: Theme.of(context).textTheme.bodyText2
-                            ),
-                        ),
-                          ),
-                          ),
+                  height: 50.0,
+                  child: RaisedButton(
+            // onPressed: () {},
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(22.0)),
+            padding: EdgeInsets.fromLTRB(0, 0, 12, 0),
+            child: Ink(
+              decoration: BoxDecoration(
+                  gradient: LinearGradient(colors: [
+                    Colors.cyan[900].withOpacity(0.85),
+                    Colors.teal[400].withOpacity(0.85),
+                    ],
+                    begin: Alignment.centerLeft,
+                    end: Alignment.centerRight,
+                  ),
+                  borderRadius: BorderRadius.circular(15.0)
+              ),
+              child: Container(
+                constraints: BoxConstraints(maxWidth: 180.0, minHeight: 50.0),
+                alignment: Alignment.center,
+                child: Text(
+                  "Start Simulation",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      color: Colors.white
+                    ),
+          ),
+        ),
+      ),
+    ),
+  ),
+),
                 SizedBox(height:30),
             ],
           ),
