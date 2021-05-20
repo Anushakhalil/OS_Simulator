@@ -53,6 +53,7 @@ flutter:
     - assets/images/deadlock.jpg
     - assets/images/bankers.jpg
     - assets/images/fitting.jpg
+    - assets/images/bg_1.jpeg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -76,6 +77,9 @@ flutter:
     - family: M
       fonts:
         - asset: fonts/MISTRAL.TTF
+    - family: Q
+      fonts:
+        - asset: fonts/Quantify.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

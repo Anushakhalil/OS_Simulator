@@ -62,7 +62,7 @@ class _MainMenuState extends State<MainMenu> {
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage(
-              "assets/images/mainMenu.jpg"
+              "assets/images/bg_1.jpeg"
             ),
             fit: BoxFit.cover
             )
@@ -76,7 +76,7 @@ class _MainMenuState extends State<MainMenu> {
                 margin: EdgeInsets.only(bottom: 0),
                 child: Text("OS",
                 style: TextStyle(
-                  fontFamily: "W",
+                  fontFamily: "Q",
                   fontSize: 120
                 ),),
               ),
@@ -84,7 +84,7 @@ class _MainMenuState extends State<MainMenu> {
                 margin: EdgeInsets.only(top: 0),
                 child: Text("Simulator",
                 style: TextStyle(
-                  fontFamily: "M",
+                  fontFamily: "Q",
                   fontSize: 50
                 ),),
               ),
@@ -101,18 +101,6 @@ class _MainMenuState extends State<MainMenu> {
                                       child: Container(
                       height: 120,
                         width: 160,
-                        // decoration: BoxDecoration(
-                        //   boxShadow: [
-                        //     BoxShadow(
-                        //       color: Colors.black,
-                        //       blurRadius: 20,
-                        //       spreadRadius: 0,
-                        //       offset: Offset(
-                        //         5,5
-                        //       )
-                        //       )
-                        //       ]
-                        //   ),
                         child: ClipRect(
                           // borderRadius: BorderRadius.circular(25),
                               // topLeft: Radius.circular(25)
@@ -132,11 +120,12 @@ class _MainMenuState extends State<MainMenu> {
                                   // decoration: BoxDecoration(
                                     // shadowColor: Colors.black,
                                     
-                                    color: Colors.grey.shade200.withOpacity(0.5),
+                                    color: Colors.grey.shade200.withOpacity(0.3),
                                     shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.only(
                                       topLeft: Radius.circular(25)
                                     ),
+                                    
                                     side: BorderSide(
                                       color: Colors.white.withOpacity(0.5),
                                       width: 1
@@ -188,7 +177,7 @@ class _MainMenuState extends State<MainMenu> {
                               ) ,
                                 child: Card(
                                   // decoration: BoxDecoration(
-                                    color: Colors.grey.shade200.withOpacity(0.5),
+                                    color: Colors.grey.shade200.withOpacity(0.3),
                                     shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.only(
                                       topRight: Radius.circular(25)
@@ -251,7 +240,7 @@ class _MainMenuState extends State<MainMenu> {
                               ) ,
                                 child: Card(
                                   // decoration: BoxDecoration(
-                                    color: Colors.grey.shade200.withOpacity(0.5),
+                                    color: Colors.grey.shade200.withOpacity(0.3),
                                     shape: RoundedRectangleBorder(
                                     // borderRadius: BorderRadius.only(
                                     //   topLeft: Radius.circular(25)
@@ -307,7 +296,7 @@ class _MainMenuState extends State<MainMenu> {
                               ) ,
                                 child: Card(
                                   // decoration: BoxDecoration(
-                                    color: Colors.grey.shade200.withOpacity(0.5),
+                                    color: Colors.grey.shade200.withOpacity(0.3),
                                     shape: RoundedRectangleBorder(
                                     // borderRadius: BorderRadius.only(
                                     //   topRight: Radius.circular(25)
@@ -370,7 +359,7 @@ class _MainMenuState extends State<MainMenu> {
                               ) ,
                                 child: Card(
                                   // decoration: BoxDecoration(
-                                    color: Colors.grey.shade200.withOpacity(0.5),
+                                    color: Colors.grey.shade200.withOpacity(0.3),
                                     shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.only(
                                       bottomLeft: Radius.circular(25)
@@ -425,8 +414,7 @@ class _MainMenuState extends State<MainMenu> {
                                 sigmaY: 10
                               ) ,
                                 child: Card(
-                                  // decoration: BoxDecoration(
-                                    color: Colors.grey.shade200.withOpacity(0.5),
+                                    color: Colors.grey.shade200.withOpacity(0.3),
                                     shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.only(
                                       bottomRight: Radius.circular(25)
@@ -903,29 +891,40 @@ class _cpuShedulingState extends State<cpuSheduling> {
                               child: Align(
                   alignment: Alignment.centerRight,
                   child: Container(
-                    margin: EdgeInsets.only(right: 8),
-                      height: 50,
-                        width: 160,
-                        decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          begin: Alignment.bottomLeft,
-                       end: Alignment.centerRight,
-                       colors: [
-                         Colors.blue[900].withOpacity(0.85),
-                         Colors.blue[800].withOpacity(0.85),
-                         Colors.blue[700].withOpacity(0.85),
-                         Colors.blue[600].withOpacity(0.85),
-                         ],
-                        ),
-                         borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                         ),
-                        child:Center(
-                            child: Text("Start Simulation",
-                            style: Theme.of(context).textTheme.bodyText2
-                            ),
-                        ),
-                          ),
-                          ),
+  height: 50.0,
+  child: RaisedButton(
+    // onPressed: () {},
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(22.0)),
+    padding: EdgeInsets.all(0.0),
+    child: Ink(
+      decoration: BoxDecoration(
+          gradient: LinearGradient(colors: [
+            Colors.blue[900].withOpacity(0.85),
+            // Colors.blue[800].withOpacity(0.85),
+            // Colors.blue[700].withOpacity(0.85),
+            Colors.blue[600].withOpacity(0.85),
+            ],
+            begin: Alignment.centerLeft,
+            end: Alignment.centerRight,
+          ),
+          borderRadius: BorderRadius.circular(15.0)
+      ),
+      child: Container(
+        constraints: BoxConstraints(maxWidth: 180.0, minHeight: 50.0),
+        alignment: Alignment.center,
+        child: Text(
+          "Login",
+          textAlign: TextAlign.center,
+          style: TextStyle(
+              color: Colors.white
+            ),
+          ),
+        ),
+      ),
+    ),
+  ),
+),
               ),
                 SizedBox(height: 30)
             ],),),
@@ -1165,31 +1164,35 @@ class _algoDetailsState extends State<algoDetails> {
                 ),
               ),
               Spacer(),
-              Align(
+               Align(
                   alignment: Alignment.centerRight,
                   child: Container(
-                    margin: EdgeInsets.only(right: 8),
+                    margin: EdgeInsets.only(right: 5),
                       height: 50,
                         width: 160,
-                        decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          begin: Alignment.bottomLeft,
-                       end: Alignment.centerRight,
-                       colors: [
-                         Colors.grey[850].withOpacity(0.85),
-                         Colors.grey[800].withOpacity(0.85),
-                         Colors.grey[700].withOpacity(0.85),
-                         ],
-                        ),
-                         borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                         ),
-                        child:Center(
-                            child: Text("Start Simulation",
+                        child: Card(
+                            color: Colors.grey[800],
+                            shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15
+                            ),
+                            side: BorderSide(
+                              color: Colors.white.withOpacity(0.5),
+                              width: 1
+                            )
+                          ),
+                          child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text("Start Simulation",
                             style: Theme.of(context).textTheme.bodyText2
                             ),
+                          ],
                         ),
                           ),
-                          ),
+                          )),
+                  ),
                   SizedBox(height: 30),
             ],
           ),),
@@ -1294,32 +1297,37 @@ class _processSyncState extends State<processSync> {
                   Align(
                   alignment: Alignment.centerRight,
                   child: Container(
-                    margin: EdgeInsets.only(right: 8),
-                      height: 50,
-                        width: 160,
-                        decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          begin: Alignment.bottomLeft,
-                       end: Alignment.centerRight,
-                       colors: [
-                         Colors.purple[900].withOpacity(0.85),
-                         Colors.purple[800].withOpacity(0.85),
-                         Colors.purple[600].withOpacity(0.85),
-                         Colors.blueAccent[700].withOpacity(0.80),
-                         Colors.blueAccent[400].withOpacity(0.80),
-                         Colors.blue[600].withOpacity(0.85),
-                         Colors.blue[400].withOpacity(0.85),
-                         Colors.blueAccent[100].withOpacity(0.85), 
-                         ],
-                        ),
-                         borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                         ),
-                        child:Center(
-                            child: Text("Start Simulation",
-                            style: Theme.of(context).textTheme.bodyText2
-                            ),
-                        ),
-                          ),
+  height: 50.0,
+  child: RaisedButton(
+    // onPressed: () {},
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(22.0)),
+    padding: EdgeInsets.all(0.0),
+    child: Ink(
+      decoration: BoxDecoration(
+          gradient: LinearGradient(colors: [
+            Colors.purple[900].withOpacity(0.85),
+            Colors.blue[400].withOpacity(0.85),
+            ],
+            begin: Alignment.centerLeft,
+            end: Alignment.centerRight,
+          ),
+          borderRadius: BorderRadius.circular(15.0)
+      ),
+      child: Container(
+        constraints: BoxConstraints(maxWidth: 180.0, minHeight: 50.0),
+        alignment: Alignment.center,
+        child: Text(
+          "Login",
+          textAlign: TextAlign.center,
+          style: TextStyle(
+              color: Colors.white
+          ),
+        ),
+      ),
+    ),
+  ),
+),
                           ),
               SizedBox(height:30),
           ],),),
