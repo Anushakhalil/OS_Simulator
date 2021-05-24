@@ -21,7 +21,7 @@ git clone https://github.com/Anushakhalil/OS_Simulator
 flutter run
 ```
 ### App Interface
-- MainMenu Page
+- MainMenu Page <br/>
     The main menu page contains:
     1. Cpu-Sheduling <br/>
     2. Process Synchronization (Semaphore)
@@ -40,10 +40,10 @@ flutter run
 
 - Under Cpu-Sheduling comes the algo-details screen
     
-    Algo-details <br/>
-        - Process Name
-        - Arrival Time
-        - Burst Time
+Algo-details <br/>
+    - Process Name
+    - Arrival Time
+    - Burst Time
 
 ![2](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_3.png "Screen image for Algo-Details")
 
