@@ -34,15 +34,15 @@ flutter run
     6. Page-Replacement
 
 
-![1](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_1.png "Screen image for Main-Menu")
+<!-- ![1](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_1.png "Screen image for Main-Menu") -->
 
 
-<!-- 1. Cpu-Sheduling <br/>
+1. Cpu-Sheduling <br/>
     - Algorithms (FCFS, SJF, Priority, RR)
     - Type (Non-p, p)  
 
 
-![2](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_2.png "Screen image for Cpu-Sheduling")
+<!-- ![2](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_2.png "Screen image for Cpu-Sheduling") -->
 
 
 Under Cpu-Sheduling comes the algo-details screen    
@@ -52,7 +52,7 @@ Algo-details <br/>
     - Burst Time
 
 
-![3](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_3.png "Screen image for Algo-Details")
+<!-- ![3](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_3.png "Screen image for Algo-Details") -->
 
 
 2. Process Synchronization (Semaphore)  <br/>
@@ -60,7 +60,7 @@ Algo-details <br/>
     - Post Processes
 
 
-![4](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_4.png "Screen image for Process-Synchronization")
+<!-- ![4](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_4.png "Screen image for Process-Synchronization") -->
 
 
 3. Deadlock Detection <br/>
@@ -70,7 +70,7 @@ Algo-details <br/>
         - End Edge
 
 
-![5](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_5.png "Screen image for Deadlock-Detection")
+<!-- ![5](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_5.png "Screen image for Deadlock-Detection") -->
 
 
 4. Bankers-Algorithm <br/>
@@ -81,7 +81,7 @@ Algo-details <br/>
         - Need Vector
 
 
-![6](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_6.png "Screen image for Bankers-Algorithm")
+<!-- ![6](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_6.png "Screen image for Bankers-Algorithm") -->
 
 
 5. Fitting-Algorithm <br/>
@@ -91,7 +91,7 @@ Algo-details <br/>
         - Block Size
 
 
-![7](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_7.png "Screen image for Fitting-Algorithm")
+<!-- ![7](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_7.png "Screen image for Fitting-Algorithm") -->
 
 
 3. Page-Replacement <br/>
@@ -99,4 +99,4 @@ Algo-details <br/>
     - ReferenceString
 
 
-![8](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_8.png "Screen image for Page-Replacement") -->
+<!-- ![8](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_8.png "Screen image for Page-Replacement") -->
