@@ -40,7 +40,7 @@ flutter run
 
 - Under Cpu-Sheduling comes the algo-details screen
     
-    Algo-details 
+    Algo-details <br/>
         - Process Name
         - Arrival Time
         - Burst Time
