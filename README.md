@@ -37,7 +37,7 @@ flutter run
 ![1](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_1.png "Screen image for Main-Menu")
 
 
-1. Cpu-Sheduling <br/>
+<!-- 1. Cpu-Sheduling <br/>
     - Algorithms (FCFS, SJF, Priority, RR)
     - Type (Non-p, p)  
 
@@ -99,4 +99,4 @@ Algo-details <br/>
     - ReferenceString
 
 
-![8](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_8.png "Screen image for Page-Replacement")
+![8](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_8.png "Screen image for Page-Replacement") -->
