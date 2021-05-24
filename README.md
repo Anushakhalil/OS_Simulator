@@ -36,7 +36,7 @@ flutter run
     - Algorithms (FCFS, SJF, Priority, RR)
     - Type (Non-p, p)  
 
-![1](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_2.png "Screen image for Cpu-Sheduling")
+![2](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_2.png "Screen image for Cpu-Sheduling")
 
 Under Cpu-Sheduling comes the algo-details screen    
 Algo-details <br/>
@@ -44,13 +44,13 @@ Algo-details <br/>
     - Arrival Time
     - Burst Time
 
-![2](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_3.png "Screen image for Algo-Details")
+![3](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_3.png "Screen image for Algo-Details")
 
 2. Process Synchronization (Semaphore)  <br/>
     - Initial Processes
     - Post Processes
 
-![1](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_4.png "Screen image for Process-Synchronization")
+![4](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_4.png "Screen image for Process-Synchronization")
 
 3. Deadlock Detection <br/>
     - Number of processes
@@ -58,7 +58,7 @@ Algo-details <br/>
         - Start Edge
         - End Edge
 
-![1](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_5.png "Screen image for Deadlock-Detection")
+![5](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_5.png "Screen image for Deadlock-Detection")
 
 4. Bankers-Algorithm <br/>
     - TotalWorkVector
@@ -67,7 +67,7 @@ Algo-details <br/>
         - Process Name
         - Need Vector
 
-![1](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_6.png "Screen image for Bankers-Algorithm")
+![6](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_6.png "Screen image for Bankers-Algorithm")
 
 5. Fitting-Algorithm <br/>
     - Type (FIRST FIt, BEST FIT, WORST FIT)
@@ -75,10 +75,10 @@ Algo-details <br/>
         - Process Size
         - Block Size
 
-![1](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_7.png "Screen image for Fitting-Algorithm")
+![7](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_7.png "Screen image for Fitting-Algorithm")
 
 3. Page-Replacement <br/>
     - Type (FIFO, OPTIMAL, LRU)
     - ReferenceString
 
-![1](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_8.png "Screen image for Page-Replacement")
+![8](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_8.png "Screen image for Page-Replacement")
