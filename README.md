@@ -1,16 +1,59 @@
 # OS Simulator App
 
 This is a flutter project, which will provide an interface through which you can simulate multiple OS Algorithms.
+One can use this interface for my previous project, an OS_Flask_API which has multiple OS-Algorithms. To clone that repo
+```bash
+git clone https://github.com/Anushakhalil/OS-Flask-API
+```
 
-## References
+## How To Use
+1. Install Android Studio
+2. Install flutter and dart plugins
 
-A few resources to get you started if this is your first Flutter project:
+3. Then clone the repository
+```bash
+git clone https://github.com/Anushakhalil/OS_Simulator
+```
+4. Open the project on any editor i.e VSCode or Android Studio
+5. Launch the from Android Studio
+6. Then Run the command on the terminal to start the app.
+```bash
+flutter run
+```
+### App Interface
+1. Cpu-Sheduling <br/>
+    - Algorithms (FCFS, SJF, Priority, RR)
+    - Type (Non-p, p)  
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+    Algo-details <br/>
+        - Process Name
+        - Arrival Time
+        - Burst Time
 
-For help getting started with Flutter,
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+2. Process Synchronization (Semaphore)  <br/>
+    - Initial Processes
+    - Post Processes
 
+3. Deadlock Detection <br/>
+    - Number of processes
+    - Processes:
+        - Start Edge
+        - End Edge
 
+4. Bankers-Algorithm <br/>
+    - TotalWorkVector
+    - AvailableWorkVector
+    - Processes:
+        - Process Name
+        - Need Vector
+
+5. Fitting <br/>
+    - Type (FIRST FIt, BEST FIT, WORST FIT)
+    - Processes:
+        - Process Size
+        - Block Size
+
+3. Page-Replacement <br/>
+    - Type (FIFO, OPTIMAL, LRU)
+    - ReferenceString
+    
