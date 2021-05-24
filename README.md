@@ -34,7 +34,7 @@ flutter run
     6. Page-Replacement
 
 
-![1](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_1.PNG "Screen image for Main-Menu")
+![1](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_1.png "Screen image for Main-Menu")
 
 
 <!-- 1. Cpu-Sheduling <br/>
