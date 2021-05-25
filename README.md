@@ -34,7 +34,7 @@ flutter run
     6. Page-Replacement
 
 
-<!-- ![1](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_1.png "Screen image for Main-Menu") -->
+![1](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_1.jpg "Screen image for Main-Menu")
 
 
 1. Cpu-Sheduling <br/>
@@ -42,7 +42,7 @@ flutter run
     - Type (Non-p, p)  
 
 
-<!-- ![2](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_2.png "Screen image for Cpu-Sheduling") -->
+![2](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_2.jpg "Screen image for Cpu-Sheduling")
 
 
 Under Cpu-Sheduling comes the algo-details screen    
