@@ -28,11 +28,11 @@ flutter run
 **MainMenu Page** <br/>
     The main menu page contains:
     1. Cpu-Sheduling <br/>
-    2. Process Synchronization (Semaphore)
-    3. Deadlock Detection
-    4. Bankers-Algorithm
-    5. Fitting-Algorithm
-    6. Page-Replacement
+    2. Process Synchronization (Semaphore) <br/>
+    3. Deadlock Detection <br/>
+    4. Bankers-Algorithm <br/>
+    5. Fitting-Algorithm <br/>
+    6. Page-Replacement <br/>
 
 
 ![1](images/pic_1.jpg "Screen image for Main-Menu")
