@@ -44,11 +44,11 @@ flutter run
 
 ![2](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_2.jpg "Screen image for Cpu-Sheduling")
 
+- Under Cpu-Sheduling comes the algo-details screen    
 
-Under Cpu-Sheduling comes the algo-details screen    
 Algo-details <br/>
-    - Process Name
-    - Arrival Time
+    - Process Name <br/>
+    - Arrival Time <br/>
     - Burst Time
 
 
