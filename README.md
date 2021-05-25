@@ -43,7 +43,7 @@ flutter run
     - Type (Non-p, p)  
 
 
-<!-- ![2](images/pic_2.jpg "Screen image for Cpu-Sheduling") -->
+![2](images/pic_2.png "Screen image for Cpu-Sheduling")
 
 *Under Cpu-Sheduling comes the algo-details screen*  
 
@@ -53,7 +53,7 @@ flutter run
     - Burst Time
 
 
-<!-- ![3](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_3.png "Screen image for Algo-Details") -->
+![3](images/pic_3.png "Screen image for Algo-Details")
 
 
 2. **Process Synchronization (Semaphore)**  <br/>
@@ -61,7 +61,7 @@ flutter run
     - Post Processes
 
 
-<!-- ![4](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_4.png "Screen image for Process-Synchronization") -->
+![4](images/pic_4.png "Screen image for Process-Synchronization")
 
 
 3. **Deadlock Detection** <br/>
@@ -71,7 +71,7 @@ flutter run
         - End Edge
 
 
-<!-- ![5](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_5.png "Screen image for Deadlock-Detection") -->
+![5](images/pic_5.png "Screen image for Deadlock-Detection")
 
 
 4. **Bankers-Algorithm** <br/>
@@ -82,7 +82,7 @@ flutter run
         - Need Vector
 
 
-<!-- ![6](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_6.png "Screen image for Bankers-Algorithm") -->
+![6](images/pic_6.png "Screen image for Bankers-Algorithm")
 
 
 5. **Fitting-Algorithm** <br/>
@@ -92,7 +92,7 @@ flutter run
         - Block Size
 
 
-<!-- ![7](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_7.png "Screen image for Fitting-Algorithm") -->
+![7](images/pic_7.png "Screen image for Fitting-Algorithm")
 
 
 3. **Page-Replacement** <br/>
@@ -100,4 +100,4 @@ flutter run
     - ReferenceString
 
 
-<!-- ![8](https://github.com/Anushakhalil/OS_Simulator/tree/master/images/pic_8.png "Screen image for Page-Replacement") -->
+![8](images/pic_8.png "Screen image for Page-Replacement")
