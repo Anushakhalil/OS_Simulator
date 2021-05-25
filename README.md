@@ -17,7 +17,7 @@ git clone https://github.com/Anushakhalil/OS_Simulator
 ```
 
 4. Open the project on any editor i.e VSCode or Android Studio
-5. Launch the from Android Studio
+5. Launch the virtual device from AVD manager in Android Studio
 6. Then Run the command on the terminal to start the app.
 ```bash
 flutter run
