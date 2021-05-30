@@ -943,8 +943,10 @@ class _algoDetailsState extends State<algoDetails> {
   final at = TextEditingController();
   final bt = TextEditingController();
   final p = TextEditingController();
+  int index = 0 ;
   bool ex = false;
   List list= [];
+  int iterator = 0;
   void kchbhi(){
     if(
       process.text != "" && at.text != "" && bt.text != ""
@@ -958,11 +960,13 @@ class _algoDetailsState extends State<algoDetails> {
             ex = false;
             list.add({
               "process": process.text,
-              "ariival time": at.text,
+              "arrival time": at.text,
               "burst time": bt.text,
               "priority": null
             }); // list add khtm
             print(list);
+            iterator ++;
+            print(iterator);
           });
           
         } // second if cond
@@ -974,11 +978,13 @@ class _algoDetailsState extends State<algoDetails> {
             list.add(
               {
               "process": process.text,
-              "ariival time": at.text,
+              "arrival time": at.text,
               "burst time": bt.text,
               "priority": p.text
             });
+            iterator ++;
           });
+          
         } else{
           setState(() {
             ex = true;
@@ -1000,6 +1006,14 @@ class _algoDetailsState extends State<algoDetails> {
     p.clear();
  
   }
+  clearCard(item){
+    index= list.indexWhere((list) => list["process"] == item["process"]
+     && list["arrival time"] == item["arrival time"]
+     && list["burst time"] == item["burst time"]
+     && list["priority"] == item["priority"]);
+
+    list.removeAt(index);
+  }
 
   Widget cardContainer(item){
     return Container(
@@ -1015,11 +1029,35 @@ class _algoDetailsState extends State<algoDetails> {
                       child: Column(
                         children: [
                           Padding(
+                                padding: const EdgeInsets.fromLTRB(20, 10,20,0),
+                          child: Align(
+                          alignment: Alignment.centerRight,
+                          child: Card(
+                  color: Colors.transparent,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50),
+                     side: BorderSide(
+                       color: Colors.white,
+                       width: 2),),
+                       child: IconButton(
+                         onPressed: (){ 
+                         setState((){
+                           clearCard(item);
+                         });
+                         },
+                           icon: Icon(
+                             Icons.clear,
+                                color: Colors.white ),
+                            iconSize: 28,),
+                       ),
+                        ),
+                              ),
+                          Padding(
                             padding: const EdgeInsets.fromLTRB(90, 12, 90, 12),
                             child: Column(
                               children: [
                                 Text(item["process"]),
-                                Text(item["ariival time"]),
+                                Text(item["arrival time"]),
                                 Text(item["burst time"]),
                                 item["priority"] != null ? 
                                 Text(item["priority"]) : Text(""),
@@ -1596,6 +1634,7 @@ class _deadlockDetState extends State<deadlockDet> {
   final no_p = TextEditingController();
   final startedge = TextEditingController();
   final endedge = TextEditingController();
+  int index = 0;
   List list = [];
   bool  ex = false;
 
@@ -1626,14 +1665,18 @@ class _deadlockDetState extends State<deadlockDet> {
 
 
   clearTextInput(){
-    
     startedge.clear();
     endedge.clear();
  
   }
+  clearCard(item){
+    index= list.indexWhere((list) => list["startEdge"] == item["startEdge"]
+     && list["endEdge"] == item["endEdge"]);
+    list.removeAt(index);
+  }
 
 Widget cardContainer(item){
-  return Container(
+    return Container(
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
                                   child: Card(
@@ -1646,11 +1689,35 @@ Widget cardContainer(item){
                       child: Column(
                         children: [
                           Padding(
+                                padding: const EdgeInsets.fromLTRB(20, 10,20,0),
+                          child: Align(
+                          alignment: Alignment.centerRight,
+                          child: Card(
+                  color: Colors.transparent,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50),
+                     side: BorderSide(
+                       color: Colors.white,
+                       width: 2),),
+                       child: IconButton(
+                         onPressed: (){ 
+                         setState((){
+                           clearCard(item);
+                         });
+                         },
+                           icon: Icon(
+                             Icons.clear,
+                                color: Colors.white ),
+                            iconSize: 28,),
+                       ),
+                        ),
+                              ),
+                          Padding(
                             padding: const EdgeInsets.fromLTRB(90, 12, 90, 12),
                             child: Column(
                               children: [
                                 Text(item["startEdge"]),
-                                Text(item["endEdge"])
+                                Text(item["endEdge"]),
                               ],
                             ),
                           ),
@@ -1658,7 +1725,7 @@ Widget cardContainer(item){
                   ),
                 ),
               );
-}
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -1846,6 +1913,7 @@ class _bankersState extends State<bankers> {
   final aw= TextEditingController();
   final pname= TextEditingController();
   final need= TextEditingController();
+  int index= 0;
   List list= [];
   bool ex= false;
 
@@ -1880,12 +1948,19 @@ class _bankersState extends State<bankers> {
     
     pname.clear();
     need.clear();
- 
   }
 
+clearCard(item){
+    index= list.indexWhere((list) => list["Totalworkvector"] == item["Totalworkvector"]
+     && list["Availableworkvector"] == item["Availableworkvector"]
+     && list["Processname"] == item["Processname"]
+     && list["Needvector"] == item["Needvector"]);
+
+    list.removeAt(index);
+}
   
 Widget cardContainer(item){
-  return Container(
+    return Container(
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
                                   child: Card(
@@ -1897,6 +1972,30 @@ Widget cardContainer(item){
                         width: 1)),
                       child: Column(
                         children: [
+                          Padding(
+                                padding: const EdgeInsets.fromLTRB(20, 10,20,0),
+                          child: Align(
+                          alignment: Alignment.centerRight,
+                          child: Card(
+                  color: Colors.transparent,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50),
+                     side: BorderSide(
+                       color: Colors.white,
+                       width: 2),),
+                       child: IconButton(
+                         onPressed: (){ 
+                         setState((){
+                           clearCard(item);
+                         });
+                         },
+                           icon: Icon(
+                             Icons.clear,
+                                color: Colors.white ),
+                            iconSize: 28,),
+                       ),
+                        ),
+                              ),
                           Padding(
                             padding: const EdgeInsets.fromLTRB(90, 12, 90, 12),
                             child: Column(
@@ -1912,7 +2011,8 @@ Widget cardContainer(item){
                   ),
                 ),
               );
-}
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -2104,6 +2204,7 @@ class fittingALgo extends StatefulWidget {
 class _fittingALgoState extends State<fittingALgo> {
   final bsize = TextEditingController();
   final psize = TextEditingController();
+  int index=0;
   String type = "FF";
   bool ex = false;
   List list = [];
@@ -2138,11 +2239,18 @@ class _fittingALgoState extends State<fittingALgo> {
     
     psize.clear();
     bsize.clear();
- 
   }
 
+  clearCard(item){
+    index= list.indexWhere((list) => list["String"] == item["String"]
+     && list["BlockSize"] == item["BlockSize"]
+     && list["ProcessSize"] == item["ProcessSize"]);
+
+    list.removeAt(index);
+}
+
   Widget cardContainer(item){
-  return Container(
+    return Container(
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
                                   child: Card(
@@ -2154,6 +2262,30 @@ class _fittingALgoState extends State<fittingALgo> {
                         width: 1)),
                       child: Column(
                         children: [
+                          Padding(
+                                padding: const EdgeInsets.fromLTRB(20, 10,20,0),
+                          child: Align(
+                          alignment: Alignment.centerRight,
+                          child: Card(
+                  color: Colors.transparent,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50),
+                     side: BorderSide(
+                       color: Colors.white,
+                       width: 2),),
+                       child: IconButton(
+                         onPressed: (){ 
+                         setState((){
+                           clearCard(item);
+                         });
+                         },
+                           icon: Icon(
+                             Icons.clear,
+                                color: Colors.white ),
+                            iconSize: 28,),
+                       ),
+                        ),
+                              ),
                           Padding(
                             padding: const EdgeInsets.fromLTRB(90, 12, 90, 12),
                             child: Column(
